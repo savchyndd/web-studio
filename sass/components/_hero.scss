@@ -1,0 +1,110 @@
+// Hero section
+.hero {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 118px 0;
+    text-align: center;
+    background-color: $bgr-secondary-color;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    @include media(tablet) {
+        max-width: 768px;
+    }
+
+    @include media(desktop) {
+        max-width: 1600px;
+        padding: 200px 0;
+    }
+
+}
+
+@include media(mobile) {
+    .hero {
+        background-image: $bg-gradient, url('../images/hero-bg/header-bg-mobile-480.jpg');
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            background-image: $bg-gradient, url('../images/hero-bg/hero-bg@2x/header-bg-mobile@2x.jpg');
+        }
+    }
+}
+
+@include media(tablet) {
+    .hero {
+        background-image: $bg-gradient, url('../images/hero-bg/header-bg-tablet-768.jpg');
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            background-image: $bg-gradient, url('../images/hero-bg/hero-bg@2x/header-bg-tablet@2x.jpg');
+        }
+    }
+}
+
+@include media(desktop) {
+    .hero {
+        background-image: $bg-gradient, url('../images/hero-bg/header-bg-desktop-1600.jpg');
+    }
+
+    @media (min-device-pixel-ratio: 2),
+    (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+        .hero {
+            background-image: $bg-gradient, url('../images/hero-bg/hero-bg@2x/header-bg-desktop@2x.jpg');
+        }
+    }
+}
+
+.hero__title {
+    max-width: 360px;
+
+    margin: auto;
+    margin-bottom: 30px;
+
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
+
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $white-color;
+
+    @include media(desktop) {
+        max-width: 696px;
+
+        font-size: 44px;
+        line-height: 1.36;
+    }
+}
+
+.hero__btn {
+    padding: 10px 24px;
+
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+
+    color: $white-color;
+    background-color: $accent-color;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    @include media(desktop) {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
